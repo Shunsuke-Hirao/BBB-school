@@ -1,0 +1,797 @@
+/*
+Theme Name: BBB
+Theme URI: http://example2.com
+Author: Your Name
+Author URI: http://example2.com
+Description: A custom theme created from VSCode HTML and CSS.
+Version: 1.0
+*/
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    font-size: 100%;
+}
+/* header */
+.logo{
+    position: absolute;
+    top: 5px;
+    z-index: 2;
+    width: 150px;
+    margin: 10px auto 0 0;
+    color: #FF3333;
+    text-align: center;
+}
+.logo p:first-child{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.logo p:last-child{
+    margin-top: -10px;
+}
+
+.nav-options{
+    display: none;
+}
+
+/* open ver */
+.open {
+    position: fixed;
+    top: 0;
+    background: #FF3333;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.open .logo{
+    color: #ffffff;
+}
+.open .nav-options{
+    display: block;
+    margin-top: 140px;
+    text-align: center;
+}
+.open .nav-options p{
+    margin: 10px 0;
+}
+.open .nav-options p:nth-child(3){
+    margin: 10px 0 50px 0;
+}
+.open .nav-options a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2rem;
+}
+.open .nav-options .apply{
+    margin-top: 20px;
+    padding: 20px 50px;
+    position: relative;
+    border: solid #ffffff;
+}
+.open .nav-options .apply::after{
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    right: -3%;
+    width: 100%;
+    height: 100%;
+    background: unset;
+    border-right: solid;
+    border-bottom: solid;
+}
+.open .toggle-btn span:nth-child(1){
+    transform: translateY(10px) rotate(-315deg);
+    width: 44px;
+    left: 15px;
+    top: 27px;
+}
+
+.open .toggle-btn span:nth-child(2){
+    opacity: 0;
+}
+
+.open .toggle-btn span:nth-child(3){
+    transform: translateY(-10px) rotate(315deg);
+    width: 44px;
+    left: 15px;
+}
+.toggle-btn{
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75px;
+    height: 70px;
+    z-index: 4;
+    cursor: pointer;
+    background: #FF3333;
+    opacity: 0.9;
+}
+
+.toggle-btn span{
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.5s;
+    border-radius: 4px;
+}
+.toggle-btn span:nth-child(1){
+    top: 22px;
+    left: 23px;
+}
+
+.toggle-btn span:nth-child(2){
+    top: 35px;
+    left: 23px;
+}
+
+.toggle-btn span:nth-child(3){
+    bottom: 20px;
+    left: 23px;
+}
+
+/* #main */
+#main{
+    position: relative;
+    margin-top: 70px;
+}
+#main .mainimage{
+    margin: 0 0 0 auto;
+    width: 70%;
+    height: 720px;
+}
+#main .mainimage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 5px 9px 60px;
+}
+    
+#main .mainphrase{
+    position: absolute;
+    top: 35%;
+    left: 10%;
+}
+#main .mainphrase p{
+    text-shadow: 3px 3px 5px #ffffff;
+    font-size: 3rem;
+    font-weight: 600;
+}
+#main .mainphrase p:nth-child(2){
+    margin-bottom: 45px;
+}
+#main .mainphrase a{
+    padding: 20px 20px 20px 120px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    background: #FF3333;
+    box-shadow: 0px 10px 0px 0px #990000;
+}
+#main .mainphrase a::after{
+    content: "";
+    display: inline-block;
+    margin-left: 95px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+
+
+
+
+/* #reason */
+#reason{
+    padding: 0;
+    margin: 0;
+}
+.subtitle{
+    padding: 85px 0 45px 0;
+}
+.subtitle h2{
+    text-align: center;
+    color: #333;
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+}
+hr{
+    margin: 0 auto;
+    width: 120px;
+    height: 2px;
+    background: #333;
+}
+.service{
+    background-color: #FF3333;
+    padding: 45px 0;
+}
+/* service1 */
+.service1{
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+    width: 50%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.service1 div:nth-child(2){
+    margin-left: 15px;
+}
+.service1 div:nth-child(2) p:first-child{
+    color:#FF3333;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+.service1 div:nth-child(2) p:last-child{
+    color:#333;
+    font-size: 0.8rem;
+}
+.service1 img{
+    width: 70px;
+    height: 45px;
+}
+/* service2 */
+.service2{
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+    margin: 20px 0 0 auto;
+    width: 50%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.service2 div:nth-child(2){
+    margin-left: 15px;
+}
+.service2 div:nth-child(2) p:first-child{
+    color:#FF3333;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+.service2 div:nth-child(2) p:last-child{
+    color:#333;
+    font-size: 0.8rem;
+}
+.service2 img{
+    width: 35px;
+    height: 45px;
+}
+
+/* student */
+#student-review{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#student-review .face{
+    width: 150px;
+    height: 150px;
+}
+#student-review .face img{
+    border-radius: 100%;
+    background-color: #cccccc;
+    width: 100%;
+    height: 100%;
+}
+#student-review .background p:first-child{
+    margin-left: 35px;
+}
+#student-review .background p:last-child{
+    text-align: center;
+}
+/* studentA */
+#student-review .studentA{
+    display: flex;
+    margin-bottom: 65px;
+}
+#student-review .textA::before{
+    content: "";
+    position: absolute;
+    background:#E9F1FB;
+    transform: rotate(45deg);
+    width: 25px;
+    height: 25px;
+    top: 70%;
+    left: -2%;
+}
+#student-review .textA{
+    position: relative;
+    background: #E9F1FB;
+    margin-left: 20px;
+    width: 55%;
+    height: 140px;
+    padding: 15px;
+    line-height: 30px;
+    border-radius: 20px
+}
+/* studentB */
+#student-review .studentB{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 65px;
+}
+#student-review .textB::before{
+    content: "";
+    position: absolute;
+    background:#E9F1FB;
+    transform: rotate(45deg);
+    width: 25px;
+    height: 25px;
+    top: 70%;
+    right: -2%;
+}
+#student-review .textB{
+    position: relative;
+    background: #E9F1FB;
+    margin-right: 20px;
+    width: 55%;
+    height: 140px;
+    padding: 15px;
+    line-height: 30px;
+    border-radius: 20px
+}
+/* studentC */
+#student-review .studentC{
+    display: flex;
+    margin-bottom: 85px;
+}
+#student-review .textC::before{
+    content: "";
+    position: absolute;
+    background:#E9F1FB;
+    transform: rotate(45deg);
+    width: 25px;
+    height: 25px;
+    top: 70%;
+    left: -2%;
+}
+#student-review .textC{
+    position: relative;
+    background: #E9F1FB;
+    margin-left: 20px;
+    width: 55%;
+    height: 140px;
+    padding: 15px;
+    line-height: 30px;
+    border-radius: 20px
+}
+
+/* school */
+#school{
+    background: url(logo/ball.gif);
+    padding-bottom: 40px;
+}
+/* first-row */
+#school .first-row{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+#school .lesson-content{
+    width: 25%;
+    padding: 60px 30px;
+    background: #fff;
+    margin-right: 60px;
+    border-radius: 15px;
+}
+#school .lesson-content p:first-child{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+#school .lesson-content p:nth-child(2){
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+#school .lesson-content p:nth-child(3){
+    width: 80%;
+    margin: 0 auto;
+}
+#school .price{
+    width: 25%;
+    padding: 60px 30px;
+    background: #fff;
+    margin-left: 60px;
+    border-radius: 15px;
+}
+#school .price p:first-child{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+#school .price p:nth-child(2){
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+#school .price p:nth-child(3){
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* second-row */
+#school .second-row{
+    display: flex;
+    justify-content: center;
+}
+#school .teacher-content{
+    width: 25%;
+    padding: 60px 30px;
+    background: #fff;
+    margin-right: 60px;
+    border-radius: 15px;
+}
+#school .teacher-content p:first-child{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+#school .teacher-content p:nth-child(2){
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+#school .teacher-content p:nth-child(3){
+    width: 80%;
+    margin: 0 auto;
+}
+#school .question{
+    width: 25%;
+    padding: 60px 30px;
+    background: #fff;
+    margin-left: 60px;
+    border-radius: 15px;
+}
+#school .question p:first-child{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+#school .question p:nth-child(2){
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+#school .question p:nth-child(3){
+    width: 80%;
+    margin: 0 auto;
+}
+
+#application{
+    text-align: center;
+    padding: 110px 0;
+}
+#application h1{
+    font-size: 1.8rem;
+}
+#application p{
+    margin-bottom: 30px;
+}
+#application a{
+    padding: 10px 20%;
+    color: #fff;
+    font-size: 1.3rem;
+    text-decoration: none;
+    border-radius: 25px;
+    background: #FF3333;
+}
+/* footer */
+footer{
+    background: #DDDDDD;
+}
+footer li{
+    list-style: none;
+}
+.footer1{
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+.footer1 p{
+    font-weight: 600;
+}
+.footer1 ul{
+    margin-top: 10px;
+    margin-left: 25px;
+}
+.footer1 a{
+    text-decoration: none;
+    color: #000000;
+}
+.course{
+    margin-right: 25px;
+}
+.teachers{
+    margin: 0 25px;
+}
+.company{
+    margin: 0 25px;
+}
+.bbb{
+    margin-left: 25px;
+}
+.footer2{
+    padding-bottom: 20px;
+}
+.footer2 p{
+    text-align: center;
+}
+
+/* smartphone */
+@media screen and (max-width:600px){
+    /* header */
+    .logo{
+        margin: 5px auto 0 0;
+    }
+
+    /* open ver */
+    .open .nav-options a{
+        font-size: 1.4rem;
+    }
+    .open .nav-options .apply{
+        padding: 15px 25px;
+    }
+
+    /* main */
+    #main{
+        margin-top: 95px;
+    }
+    #main .mainimage{
+        margin: 0;
+        width: 100%;
+        height: 270px;
+    }
+    #main .mainimage img{
+        box-shadow: unset;
+    }
+    #main .mainphrase{
+        position: unset;
+        margin: 10px auto 0 auto;
+        width: 90%;
+    }
+    #main .mainphrase p{
+        font-size: 1.8rem;
+    }
+    #main .mainphrase p:nth-child(2){
+        margin-bottom: 25px;
+    }
+    #main .mainphrase a{
+        display: block;
+        padding: 10px 45px;
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    #main .mainphrase a::after{
+        margin-left: 15px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .subtitle h2{
+        font-size: 1.8rem;
+    }
+    .service1{
+        padding: 20px 10px 20px 0;
+        width: 90%;
+    }
+    .service1 img {
+        width: 90px;
+        height: 60px;
+    }
+    .service1 div:nth-child(1){
+        margin-left: 10px;
+    }
+    .service1 div:nth-child(2) p:first-child{
+        font-size: 1.4rem;
+    }
+    .service1 div:nth-child(2) p:last-child{
+        font-size: 1rem;
+    }
+    .service2{
+        padding: 20px 0 20px 10px;
+        width: 90%;
+    }
+    .service2 img {
+        width: 50px;
+        height: 55px;
+    }
+    .service2 div:nth-child(1){
+        margin-right: 10px;
+    }
+    .service2 div:nth-child(2) p:first-child{
+        font-size: 1.4rem;
+    }
+    .service2 div:nth-child(2) p:last-child{
+        font-size: 1rem;
+    }
+
+    /* student */
+    #student-review{
+        width: 90%;
+    }
+    #student-review .background{
+        text-align: center;
+    }
+    #student-review .background p:first-child{
+        margin: 0;
+    }
+    /* .studentA */
+    #student-review .studentA {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 65px;
+    }
+    #student-review .studentA .profile{
+        margin: 30px auto 0 auto;
+    }
+    #student-review .textA {
+        margin: 0;
+        width: unset;
+        height: 185px;
+    }
+    #student-review .textA::before{
+        display: none;
+    }
+    #student-review .textA::after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -5%;
+        background:#E9F1FB;
+        width: 25px;
+        height: 25px;
+        transform: translateX(-50%) rotate(45deg);
+    }
+    /* .studentB */
+    #student-review .studentB {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 65px;
+    }
+    #student-review .studentB .profile{
+        margin: 30px auto 0 auto;
+    }
+    #student-review .textB {
+        margin: 0;
+        width: unset;
+        height: 185px;
+    }
+    #student-review .textB::before{
+        display: none;
+    }
+    #student-review .textB::after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -5%;
+        background:#E9F1FB;
+        width: 25px;
+        height: 25px;
+        transform: translateX(-50%) rotate(45deg);
+    }
+    /* .studentC */
+    #student-review .studentC {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 65px;
+    }
+    #student-review .studentC .profile{
+        margin: 30px auto 0 auto;
+    }
+    #student-review .textC {
+        margin: 0;
+        width: unset;
+        height: 185px;
+    }
+    #student-review .textC::before{
+        display: none;
+    }
+    #student-review .textC::after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -5%;
+        background:#E9F1FB;
+        width: 25px;
+        height: 25px;
+        transform: translateX(-50%) rotate(45deg);
+    }
+
+    /* school */
+    
+    /* .first-row */
+    #school .first-row{
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+    #school .first-row .lesson-content{
+        width: 100%;
+        padding: 30px 0;
+        margin: 0 0 30px 0;
+    }
+    #school .first-row .price{
+        width: 100%;
+        padding: 30px 0;
+        margin: 0 0 30px 0;
+    }
+    /* .second-row */
+    #school .second-row{
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+    #school .second-row .teacher-content{
+        width: 100%;
+        padding: 30px 0;
+        margin: 0 0 30px 0;
+    }
+    #school .second-row .question{
+        width: 100%;
+        padding: 30px 0;
+        margin: 0 0 30px 0;
+    }
+
+    /* application */
+    #application{
+        width: 90%;
+        margin: 0 auto;
+        padding: 70px 0;
+    }
+    #application h1 {
+        font-size: 1.3rem;
+    }
+    #application a{
+        padding: 10px 15%;
+    }
+
+    /* footer */
+    .footer1{
+        margin: 0 5%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .footer1 ul{
+        margin-left: 15px;
+        font-size: 0.7rem;
+    }
+    .footer1 .course{
+        width: 45%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+    .footer1 .teachers{
+        width: 45%;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    .footer1 .company{
+        width: 45%;
+        margin: 0;
+    }
+    .footer1 .bbb{
+        width: 45%;
+        margin: 0;
+    }
+}
